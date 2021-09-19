@@ -22,6 +22,8 @@
     ],
     "require": {
         "php": ">=5.3",
+        "ext-dom": "*",
+        "ext-libxml" : "*",
         "ezyang/htmlpurifier": "^4.8"
     },
     "require-dev": {

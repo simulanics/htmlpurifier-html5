@@ -92,6 +92,10 @@ class HTMLPurifier_HTML5Config extends HTMLPurifier_Config
             $schema->add('URI.SafeLinkRegexp', null, 'string', true);
         }
 
+        if (empty($schema->info['Attr.AllowedInputTypes'])) {
+            $schema->add('Attr.AllowedInputTypes', null, 'lookup', true);
+        }
+
         // HTMLPurifier doesn't define %CSS.DefinitionID, but it's required for
         // customizing CSS definition object (in the future)
         if (empty($schema->info['CSS.DefinitionID'])) {
